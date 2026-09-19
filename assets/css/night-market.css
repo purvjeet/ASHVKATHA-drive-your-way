@@ -1,0 +1,1042 @@
+/* ============================================================
+   ASHVKATHA — Underground Night Market (Non-Road-Legal Vehicle Sales)
+   Authentic Night Blue & Liquid Glass Bento Grid Theme
+   ============================================================ */
+
+body.night-market-body {
+  background-color: #060b19 !important;
+  color: #f1f5f9 !important;
+  min-height: 100vh;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+}
+
+/* Night Market Hero Header - Deep Night Blue with Electric Blue Glow */
+.nm-hero-section {
+  background: radial-gradient(circle at top right, rgba(14, 165, 233, 0.18), transparent 60%),
+              radial-gradient(circle at bottom left, rgba(30, 58, 138, 0.4), transparent 50%),
+              #060b19;
+  padding: 7.5rem 1.5rem 3.5rem;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.18);
+  position: relative;
+  margin: 0 !important;
+}
+
+.nm-disclaimer-banner {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: #38bdf8;
+  padding: 0.75rem 1.4rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 1.5rem;
+}
+
+.nm-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.03em;
+  text-shadow: 0 0 35px rgba(56, 189, 248, 0.25);
+  margin-bottom: 0.8rem;
+}
+
+.nm-title span {
+  color: #38bdf8;
+}
+
+.nm-subtitle {
+  color: #94a3b8;
+  font-size: 1.15rem;
+  max-width: 720px;
+  line-height: 1.6;
+}
+
+/* Night Market Toolbar Filters (Search, Price Sort, Brand, Fuel) */
+.nm-filter-toolbar {
+  background: rgba(11, 20, 44, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 20px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 16px 40px rgba(2, 6, 23, 0.7);
+}
+
+.nm-filter-form {
+  display: grid;
+  grid-template-columns: minmax(200px, 2fr) minmax(140px, 1fr) minmax(130px, 1fr) minmax(130px, 1fr) auto;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nm-filter-col {
+  min-width: 0;
+}
+
+.nm-filter-input, .nm-filter-select {
+  height: 48px;
+  box-sizing: border-box;
+  background: rgba(6, 11, 25, 0.85) !important;
+  border: 1px solid rgba(56, 189, 248, 0.25) !important;
+  color: #ffffff !important;
+  padding: 0 1.1rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.nm-filter-select option {
+  background: #060b19;
+  color: #ffffff;
+}
+
+.nm-filter-input:focus, .nm-filter-select:focus {
+  border-color: #38bdf8 !important;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.25);
+}
+
+.nm-filter-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  min-width: 0;
+}
+
+.btn-nm-apply {
+  height: 48px;
+  min-height: 48px;
+  box-sizing: border-box;
+  padding: 0 1.4rem;
+  background: #0284c7;
+  color: #ffffff;
+  border: 1px solid #0284c7;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  cursor: pointer;
+  outline: none !important;
+  transform: none !important;
+  text-decoration: none !important;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-nm-apply:hover {
+  background: #0369a1;
+  border-color: #0369a1;
+  color: #ffffff;
+}
+
+.btn-nm-reset {
+  height: 48px;
+  min-height: 48px;
+  box-sizing: border-box;
+  padding: 0 1.2rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: #94a3b8;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  cursor: pointer;
+  outline: none !important;
+  transform: none !important;
+  text-decoration: none !important;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.btn-nm-reset:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 1100px) {
+  .nm-filter-form {
+    grid-template-columns: 1fr 1fr;
+  }
+  .nm-filter-col-search {
+    grid-column: span 2;
+  }
+  .nm-filter-actions {
+    grid-column: span 2;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .nm-filter-form {
+    grid-template-columns: 1fr;
+  }
+  .nm-filter-col-search {
+    grid-column: span 1;
+  }
+  .nm-filter-actions {
+    grid-column: span 1;
+  }
+  .btn-nm-apply, .btn-nm-reset {
+    flex: 1;
+    width: 100%;
+  }
+}
+
+/* Bento Grid Liquid Glass Cards — Compact 3-Column Layout (6 cars visible on fullscreen) */
+.nm-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+@media (max-width: 1150px) {
+  .nm-bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .nm-bento-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.nm-card {
+  background: rgba(11, 20, 44, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(56, 189, 248, 0.18);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.7);
+}
+
+.nm-card-thumb {
+  position: relative;
+  height: 170px;
+  overflow: hidden;
+  background: #060b19;
+}
+
+.nm-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.nm-card-body {
+  padding: 1rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.nm-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.35rem;
+  gap: 0.5rem;
+}
+
+.nm-car-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.15rem;
+  line-height: 1.25;
+}
+
+.nm-car-subtitle {
+  color: #38bdf8;
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.nm-tag-brand {
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: #38bdf8;
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 0.2rem 0.55rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+/* In-Depth Specifications Matrix (Height, Weight, Ground Clearance, etc.) */
+.nm-in-depth-box {
+  background: rgba(6, 11, 25, 0.65);
+  border: 1px solid rgba(56, 189, 248, 0.14);
+  border-radius: 10px;
+  padding: 0.55rem 0.7rem;
+  margin: 0.5rem 0;
+}
+
+.nm-dim-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.4rem;
+  margin-bottom: 0.45rem;
+}
+
+.nm-dim-item {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(56, 189, 248, 0.12);
+  border-radius: 6px;
+  padding: 0.3rem 0.45rem;
+  text-align: center;
+}
+
+.nm-dim-label {
+  font-size: 0.6rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+.nm-dim-value {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.nm-specs-pills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.nm-spec-pill {
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.18);
+  color: #e2e8f0;
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 0.18rem 0.45rem;
+  border-radius: 6px;
+}
+
+.nm-features-desc {
+  font-size: 0.74rem;
+  color: #94a3b8;
+  margin-bottom: 0.6rem;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.nm-card-footer {
+  margin-top: auto;
+  padding-top: 0.65rem;
+  border-top: 1px solid rgba(56, 189, 248, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+
+.nm-price-amount {
+  font-size: 1.18rem;
+  font-weight: 900;
+  color: #38bdf8;
+  line-height: 1;
+}
+
+.nm-price-unit {
+  font-size: 0.65rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 0.15rem;
+}
+
+/* Vibrant Red "BUY NOW" Button */
+.btn-nm-action {
+  background: #dc2626 !important;
+  color: #ffffff !important;
+  font-weight: 800;
+  font-size: 0.78rem;
+  padding: 0 1.1rem;
+  height: 36px;
+  box-sizing: border-box;
+  line-height: 36px;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.45);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-decoration: none !important;
+  transform: none !important;
+  outline: none !important;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.btn-nm-action:hover {
+  background: #b91c1c !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  box-shadow: 0 6px 18px rgba(220, 38, 38, 0.6);
+  transform: none !important;
+}
+
+/* ============================================================
+   All Green Elements in Night Market Switched to Gray or White
+   ============================================================ */
+.night-market-body,
+.night-market-body * {
+  --accent-green: #ffffff !important;
+  --border-green: #334155 !important;
+  --forestgreen: #0f172a !important;
+  --mint: #ffffff !important;
+}
+
+.night-market-body .badge-success,
+.night-market-body .alert-success {
+  background: rgba(51, 65, 85, 0.6) !important;
+  color: #ffffff !important;
+  border-color: #64748b !important;
+}
+
+/* ============================================================
+   Night Market Footer (Matching Deep Night Blue Theme & No Green)
+   ============================================================ */
+.night-market-body .footer {
+  background: #040814 !important;
+  color: #94a3b8 !important;
+  border-top: 1px solid #1e293b !important;
+}
+
+.night-market-body .footer-title {
+  color: #ffffff !important;
+}
+
+.night-market-body .footer-subtitle {
+  color: #94a3b8 !important;
+}
+
+.night-market-body .social-icon-btn {
+  color: #94a3b8 !important;
+  border-color: rgba(148, 163, 184, 0.3) !important;
+}
+
+.night-market-body .social-icon-btn:hover {
+  color: #ffffff !important;
+  background: rgba(56, 189, 248, 0.2) !important;
+  border-color: #38bdf8 !important;
+}
+
+.night-market-body .footer-contact-label,
+.night-market-body .footer-col-title {
+  color: #38bdf8 !important;
+}
+
+.night-market-body .footer-contact-phone {
+  color: #ffffff !important;
+}
+
+.night-market-body .footer-contact-email {
+  color: #94a3b8 !important;
+}
+
+.night-market-body .footer-contact-email:hover {
+  color: #ffffff !important;
+}
+
+.night-market-body .footer-links-col .footer-link {
+  color: #e2e8f0 !important;
+}
+
+.night-market-body .footer-links-col .footer-link:hover {
+  color: #38bdf8 !important;
+  opacity: 1 !important;
+}
+
+.night-market-body .footer-form-card {
+  background: rgba(11, 20, 44, 0.95) !important;
+  border: 1px solid rgba(56, 189, 248, 0.25) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7) !important;
+}
+
+.night-market-body .footer-form-input,
+.night-market-body .footer-form-select,
+.night-market-body .footer-form-textarea {
+  color: #ffffff !important;
+  border-bottom-color: rgba(148, 163, 184, 0.3) !important;
+}
+
+.night-market-body .footer-form-input:focus,
+.night-market-body .footer-form-select:focus,
+.night-market-body .footer-form-textarea:focus {
+  border-bottom-color: #38bdf8 !important;
+}
+
+.night-market-body .footer-form-select option {
+  background: #040814 !important;
+  color: #ffffff !important;
+}
+
+.night-market-body .footer-form-btn {
+  background: #dc2626 !important;
+  color: #ffffff !important;
+}
+
+.night-market-body .footer-form-btn:hover {
+  background: #ef4444 !important;
+}
+
+.night-market-body .footer-bottom {
+  border-top-color: #1e293b !important;
+  color: #64748b !important;
+}
+
+.night-market-body .footer-bottom .footer-link {
+  color: #64748b !important;
+}
+
+.night-market-body .footer-bottom .footer-link:hover {
+  color: #ffffff !important;
+}
+
+/* ============================================================
+   Night Market Vehicle Dossier & Acquisition Details Page
+   Mirrors the clean UI/UX of vehicle-details.php with NM Dark Glass Theme
+   ============================================================ */
+.btn-nm-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.3rem;
+  border-radius: 9999px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  color: #e2e8f0;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-nm-back:hover {
+  border-color: #a855f7;
+  color: #ffffff;
+  background: rgba(124, 58, 237, 0.15);
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.25);
+}
+
+.nm-live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #38bdf8;
+  display: inline-block;
+  box-shadow: 0 0 10px #38bdf8;
+  animation: nmLivePulse 2s infinite;
+}
+
+@keyframes nmLivePulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+.nm-detail-layout {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 3rem;
+  align-items: start;
+}
+
+.nm-detail-main {
+  min-width: 0;
+}
+
+.nm-main-image-frame {
+  position: relative;
+  width: 100%;
+  height: 460px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  background-color: #0b1120;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(124, 58, 237, 0.12);
+}
+
+.nm-main-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nm-frame-badge {
+  position: absolute;
+  top: 1.2rem;
+  left: 1.2rem;
+  background: rgba(6, 11, 25, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  color: #38bdf8;
+  padding: 0.45rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.nm-frame-discount-pill {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  background: rgba(220, 38, 38, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(248, 113, 113, 0.5);
+  color: #ffffff;
+  padding: 0.45rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.35);
+}
+
+.nm-badge-category {
+  background: rgba(168, 85, 247, 0.15);
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  color: #c084fc;
+  font-weight: 700;
+  padding: 0.35rem 0.9rem;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.nm-badge-status {
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  color: #34d399;
+  font-weight: 700;
+  padding: 0.45rem 1.1rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nm-detail-title {
+  font-family: var(--font-title);
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 0.4rem;
+}
+
+.nm-detail-subtitle {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.nm-dossier-card {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(56, 189, 248, 0.18);
+  border-radius: 16px;
+  padding: 1.6rem;
+  margin-bottom: 2.2rem;
+  backdrop-filter: blur(12px);
+}
+
+.nm-card-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.nm-card-text {
+  color: #94a3b8;
+  font-size: 1.02rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.nm-section-heading {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.nm-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 900px) {
+  .nm-specs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 540px) {
+  .nm-specs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.nm-spec-box {
+  background: rgba(15, 23, 42, 0.88);
+  border: 1px solid rgba(168, 85, 247, 0.28);
+  border-radius: 14px;
+  padding: 1.4rem 1.15rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 125px;
+}
+
+.nm-spec-box:hover {
+  border-color: rgba(168, 85, 247, 0.6);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(124, 58, 237, 0.25);
+}
+
+.nm-spec-box i {
+  font-size: 1.75rem;
+  color: #38bdf8;
+  margin-bottom: 0.65rem;
+  display: inline-block;
+  text-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+}
+
+.nm-spec-label {
+  font-size: 0.76rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  margin-bottom: 0.45rem;
+}
+
+.nm-spec-value {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.35;
+}
+
+/* Custom Upgrades Box variant with cyan accent */
+.nm-spec-box-upgrade {
+  border-color: rgba(56, 189, 248, 0.28);
+  position: relative;
+}
+
+.nm-spec-box-upgrade:hover {
+  border-color: rgba(56, 189, 248, 0.65);
+  box-shadow: 0 10px 28px rgba(56, 189, 248, 0.25);
+}
+
+.nm-spec-box-upgrade i {
+  color: #a855f7;
+  text-shadow: 0 0 12px rgba(168, 85, 247, 0.4);
+}
+
+.nm-features-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 2.5rem;
+}
+
+.nm-feature-badge {
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  color: #e2e8f0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.55rem 1.1rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.nm-terms-card {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  border-radius: 16px;
+  padding: 1.8rem;
+  margin-top: 2rem;
+}
+
+.nm-terms-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.nm-terms-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  color: #94a3b8;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.nm-terms-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.nm-terms-list li i {
+  color: #a855f7;
+  margin-top: 0.2rem;
+}
+
+/* Sticky Acquisition Checkout Box (Right Column) */
+.nm-acquisition-box {
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  border-radius: 20px;
+  padding: 2rem;
+  position: sticky;
+  top: 100px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(124, 58, 237, 0.15);
+  backdrop-filter: blur(20px);
+}
+
+.nm-acquisition-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+
+.nm-header-label {
+  font-size: 0.8rem;
+  color: #a855f7;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.nm-header-price {
+  font-family: var(--font-title);
+  font-size: 2.1rem;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.1;
+  margin-top: 0.2rem;
+  text-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+}
+
+.nm-badge-discount {
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.5);
+  color: #f87171;
+  font-weight: 800;
+  font-size: 0.78rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 9999px;
+  letter-spacing: 0.05em;
+}
+
+.nm-tax-notice {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  padding-bottom: 1.2rem;
+  margin-bottom: 1.4rem;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.nm-checkout-form .form-group {
+  margin-bottom: 1.1rem;
+}
+
+.nm-form-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #cbd5e1;
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.nm-form-input {
+  background: rgba(6, 11, 25, 0.85) !important;
+  border: 1px solid rgba(168, 85, 247, 0.25) !important;
+  color: #ffffff !important;
+  border-radius: 10px;
+  font-size: 0.88rem;
+  padding: 0.65rem 0.9rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.nm-form-input:focus {
+  border-color: #a855f7 !important;
+  box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.3) !important;
+  outline: none;
+}
+
+.nm-form-input option {
+  background: #0b1120;
+  color: #ffffff;
+}
+
+.nm-agreement-group {
+  margin: 1.2rem 0;
+}
+
+.nm-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  line-height: 1.45;
+  cursor: pointer;
+}
+
+.nm-checkbox-label input[type="checkbox"] {
+  margin-top: 0.2rem;
+  accent-color: #7c3aed;
+}
+
+.btn-nm-acquire {
+  width: 100%;
+  padding: 0.9rem 1.5rem;
+  background: linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.4);
+  transition: all 0.2s ease;
+}
+
+.btn-nm-acquire:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(124, 58, 237, 0.6);
+  background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+}
+
+.nm-guarantee-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(56, 189, 248, 0.15);
+}
+
+.nm-guarantee-item {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.78rem;
+  color: #94a3b8;
+}
+
+@media (max-width: 992px) {
+  .nm-detail-layout {
+    grid-template-columns: 1fr;
+  }
+  .nm-specs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .nm-specs-grid {
+    grid-template-columns: 1fr;
+  }
+  .nm-main-image-frame {
+    height: 280px;
+  }
+}
+
+
+

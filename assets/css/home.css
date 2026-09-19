@@ -1,0 +1,441 @@
+/* ============================================================
+   ASHVKATHA — Smart Vehicle Rental & Fleet Management System
+   Main Ashvkatha Homepage Stylesheet (home.css)
+   Clean Palette: #3B82F680 | #f5f5f7 | #1d1d1f | #aaaaaa | #007aff
+   ============================================================ */
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7.5rem 1.5rem 6rem;
+  background: linear-gradient(180deg, rgba(245, 245, 247, 0.82) 0%, rgba(245, 245, 247, 0.98) 100%),
+    url('https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  border-bottom: 1px solid rgba(170, 170, 170, 0.25);
+  margin: 0 !important;
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-badge {
+  display: none !important;
+}
+
+.hero-title {
+  font-size: 3.8rem;
+  font-weight: 900;
+  font-family: var(--font-title);
+  line-height: 1.1;
+  color: #1d1d1f;
+  margin-bottom: 1.2rem;
+}
+
+.hero-title span {
+  color: #007aff;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #6e6e73;
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+/* Smart Search Widget */
+.search-widget-container {
+  max-width: 1140px;
+  margin: -4rem auto 0;
+  position: relative;
+  z-index: 100;
+  padding: 0 1.5rem;
+}
+
+.search-widget {
+  background: #ffffff;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(170, 170, 170, 0.3);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 2rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+
+.search-form {
+  display: grid;
+  grid-template-columns: minmax(180px, 1.5fr) minmax(130px, 1fr) minmax(130px, 1fr) minmax(140px, 1.1fr) auto;
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+.search-field {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.search-field label {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #1d1d1f;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  white-space: nowrap;
+}
+
+.search-field label i {
+  color: #007aff;
+}
+
+.search-field .form-control {
+  height: 50px;
+  box-sizing: border-box;
+  padding: 0 1rem;
+  font-size: 0.92rem;
+  line-height: normal;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(170, 170, 170, 0.35);
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.search-form .btn-search-submit {
+  height: 50px;
+  box-sizing: border-box;
+  padding: 0 1.8rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  background-color: #007aff;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  white-space: nowrap;
+  width: 100%;
+  transition: background-color 0.2s ease;
+}
+
+.search-form .btn-search-submit:hover {
+  background-color: #0060df;
+}
+
+/* Category Grid */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+}
+
+.category-card {
+  background: #ffffff;
+  border: 1px solid rgba(170, 170, 170, 0.25);
+  border-radius: var(--radius-md);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.category-card:hover {
+  border-color: #007aff;
+  box-shadow: 0 12px 30px #3B82F680;
+}
+
+.category-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #f5f5f7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #007aff;
+  font-size: 1.6rem;
+}
+
+.category-card:hover .category-icon {
+  background: #007aff;
+  color: #fff;
+}
+
+.category-name {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #1d1d1f;
+}
+
+/* Featured Vehicle Cards Grid */
+.vehicles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.vehicle-card {
+  background: #ffffff;
+  border: 1px solid rgba(170, 170, 170, 0.25);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+.vehicle-card:hover {
+  border-color: #007aff;
+  box-shadow: 0 16px 36px #3B82F680;
+}
+
+.vehicle-thumb {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background-color: #f5f5f7;
+}
+
+.vehicle-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vehicle-card:hover .vehicle-thumb img {
+  opacity: 0.95;
+}
+
+.vehicle-status-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+}
+
+.vehicle-details-body {
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.vehicle-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #1d1d1f;
+  margin-bottom: 0.5rem;
+}
+
+.vehicle-specs-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1rem 0 1.5rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid rgba(170, 170, 170, 0.2);
+}
+
+.spec-tag {
+  font-size: 0.82rem;
+  color: #6e6e73;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #f5f5f7;
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(170, 170, 170, 0.15);
+}
+
+.vehicle-pricing-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.price-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-amount {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #1d1d1f;
+}
+
+.price-unit {
+  font-size: 0.8rem;
+  color: #aaaaaa;
+}
+
+/* Feature Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.feature-card {
+  background: #ffffff;
+  border: 1px solid rgba(170, 170, 170, 0.25);
+  border-radius: var(--radius-lg);
+  padding: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.feature-icon-wrapper {
+  width: 54px;
+  height: 54px;
+  background-color: #f5f5f7;
+  border-radius: 50%;
+  color: #007aff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 0 14px #3B82F680;
+}
+
+/* How It Works Steps */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.step-card {
+  background: #ffffff;
+  border: 1px solid rgba(170, 170, 170, 0.25);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.step-number {
+  width: 44px;
+  height: 44px;
+  background: #007aff;
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.2rem;
+  box-shadow: 0 4px 14px #3B82F680;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  text-align: center;
+}
+
+.stat-number {
+  font-family: var(--font-title);
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: #007aff;
+  margin-bottom: 0.3rem;
+}
+
+.stat-label {
+  color: #1d1d1f;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  .search-form {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .search-field.search-action {
+    grid-column: span 2;
+  }
+  .search-field.search-action label {
+    display: none;
+  }
+  .category-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .vehicles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .search-form {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+  .search-field.search-action {
+    grid-column: span 1;
+  }
+  .search-field.search-action label {
+    display: none;
+  }
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .vehicles-grid {
+    grid-template-columns: 1fr;
+  }
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}

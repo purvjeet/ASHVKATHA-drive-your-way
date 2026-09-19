@@ -1,0 +1,248 @@
+/* ============================================================
+   ASHVKATHA — Authentic Vercel Floating Pill Header & Nav
+   Extracted directly from https://ashvkatha.vercel.app/
+   ============================================================ */
+
+.nav-header-container {
+  z-index: 1000;
+  width: auto;
+  max-width: 92%;
+  position: fixed;
+  top: 24px;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 !important;
+  padding: 0 !important;
+  animation: none !important;
+  transition: none !important;
+  pointer-events: auto !important;
+  opacity: 1 !important;
+}
+
+/* Guard against any hover transform resets that caused sideways sliding */
+.nav-header-container:hover {
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
+.nav-pill {
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  background: rgba(20, 15, 12, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50px;
+  align-items: center;
+  gap: 26px;
+  padding: 0 32px;
+  height: 54px;
+  min-height: 54px;
+  display: flex;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+  animation: none !important;
+  transition: none !important;
+}
+
+.nav-link {
+  color: #fffc;
+  letter-spacing: .02em;
+  text-transform: none;
+  cursor: pointer;
+  font-size: .9rem;
+  font-weight: 500;
+  font-family: var(--font-body), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: 0 0;
+  border: none;
+  padding: 4px 0;
+  text-decoration: none;
+  transition: color .2s;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.2;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #fff;
+  outline: none;
+}
+
+.nav-link.active:after {
+  content: "";
+  background: #fff;
+  border-radius: 1px;
+  width: 100%;
+  height: 1.5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.nav-logo {
+  text-align: center;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  border-left: none;
+  border-right: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+  display: flex;
+  text-decoration: none !important;
+}
+
+.nav-logo-main {
+  font-family: var(--font-title), Georgia, "Times New Roman", serif;
+  letter-spacing: 0.22em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-weight: 900;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.nav-logo-sub {
+  color: #d5cdc4;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-top: 2px;
+  font-size: 0.52rem;
+  font-family: var(--font-body), sans-serif;
+  white-space: nowrap;
+}
+
+/* Fixed Top Right Auth Button — Same 54px Height as Navbar */
+.top-right-auth {
+  position: fixed;
+  top: 24px;
+  right: 28px;
+  z-index: 1005;
+  height: 54px;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes rgbFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Premium Flowing Rainbow RGB Button with Exact 54px Height Matching Navbar */
+.rgb-login-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  height: 54px;
+  padding: 0 1.6rem;
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #ffffff !important;
+  background: #141416 !important;
+  border-radius: 50px;
+  text-decoration: none;
+  border: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.rgb-login-btn i {
+  color: #00dfd8;
+  font-size: 0.95rem;
+}
+
+/* Premium RGB Gradient Flowing Border */
+.rgb-login-btn::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #ff0055, #7928ca, #0070f3, #00dfd8, #00ff87, #ffbb00, #ff0055) !important;
+  background-size: 350% 350% !important;
+  animation: rgbFlow 3.5s linear infinite !important;
+  z-index: -1;
+  filter: drop-shadow(0 0 10px rgba(0, 112, 243, 0.55)) drop-shadow(0 0 5px rgba(255, 0, 85, 0.35));
+}
+
+.rgb-login-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50px;
+  background: #121214;
+  z-index: -1;
+}
+
+.rgb-login-btn:hover {
+  color: #ffffff !important;
+  box-shadow: 0 0 28px rgba(0, 112, 243, 0.7), 0 0 16px rgba(255, 0, 85, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .nav-pill {
+    padding: 0 20px;
+    gap: 16px;
+    height: 48px;
+    min-height: 48px;
+  }
+  .nav-link {
+    font-size: 0.82rem;
+  }
+  .nav-logo-main {
+    font-size: 1.1rem;
+    letter-spacing: 0.16em;
+  }
+  .nav-logo-sub {
+    font-size: 0.46rem;
+  }
+  .top-right-auth {
+    height: 48px;
+  }
+  .rgb-login-btn {
+    height: 48px;
+    padding: 0 1.2rem;
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .nav-header-container {
+    top: 14px;
+    max-width: 96%;
+  }
+  .nav-pill {
+    padding: 0 14px;
+    gap: 10px;
+    height: 44px;
+    min-height: 44px;
+  }
+  .nav-link {
+    font-size: 0.74rem;
+  }
+  .nav-logo-main {
+    font-size: 0.92rem;
+    letter-spacing: .12em;
+  }
+  .nav-logo-sub {
+    display: none;
+  }
+  .top-right-auth {
+    top: 14px;
+    right: 12px;
+    height: 44px;
+  }
+  .rgb-login-btn {
+    height: 44px;
+    padding: 0 0.9rem;
+    font-size: 0.75rem;
+  }
+}
